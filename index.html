@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>User Survey</title>
+  <link rel="stylesheet" href="survey.css" />
+</head>
+<body>
+  <main class="survey-container">
+    <h1 class="section-title">We Value Your Feedback</h1>
+    <p class="intro">Help us improve by completing this short survey.</p>
+
+    <form id="surveyForm" class="survey-form" novalidate>
+      <!-- Name -->
+      <label>
+        <span class="label">Full Name</span>
+        <input type="text" name="name" required placeholder="Your full name" />
+      </label>
+
+      <!-- Email -->
+      <label>
+        <span class="label">Email</span>
+        <input type="email" name="email" required placeholder="you@example.com" />
+      </label>
+
+      <!-- Radio -->
+      <fieldset>
+        <legend>How did you hear about us?</legend>
+        <label><input type="radio" name="source" value="social" required /> Social Media</label>
+        <label><input type="radio" name="source" value="friend" /> Friend</label>
+        <label><input type="radio" name="source" value="search" /> Search Engine</label>
+        <label><input type="radio" name="source" value="other" /> Other</label>
+      </fieldset>
+
+      <!-- Select -->
+      <label>
+        <span class="label">How would you rate our website?</span>
+        <select name="rating" required>
+          <option value="">Choose a rating</option>
+          <option value="5">Excellent</option>
+          <option value="4">Very Good</option>
+          <option value="3">Good</option>
+          <option value="2">Fair</option>
+          <option value="1">Poor</option>
+        </select>
+      </label>
+
+      <!-- Checkbox -->
+      <fieldset>
+        <legend>What features matter most to you? (select all that apply)</legend>
+        <label><input type="checkbox" name="features" value="design" /> Design</label>
+        <label><input type="checkbox" name="features" value="usability" /> Usability</label>
+        <label><input type="checkbox" name="features" value="speed" /> Speed</label>
+        <label><input type="checkbox" name="features" value="content" /> Content</label>
+      </fieldset>
+
+      <!-- Message -->
+      <label>
+        <span class="label">Additional comments</span>
+        <textarea name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+      </label>
+
+      <!-- Submit -->
+      <div class="form-actions">
+        <button type="submit" class="btn primary cta-glow">Submit Survey</button>
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Survey — Styled with HTML, CSS & JS</p>
+  </footer>
+
+  <script src="survey.js"></script>
+</body>
+</html>
